@@ -1,8 +1,24 @@
-## 未来
-一款 TODO APP
+# todo-app
 
-使用的是前后端分离技术
-- 前端技术栈：Vue
-- 前端作者：[XunianShuang](https://github.com/YuelinWang)
-- 后端技术栈：java
-- 后端作者：[]()
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
