@@ -23,13 +23,18 @@ function useEmitAddTodo(tid, emit) {
   const todoContent = ref("");
 
   const emitAddTodo = () => {
-    const todo = {
-      id: tid,
-      content: todoContent.value,
-      completed: false,
-    };
-    emit("add-todo", todo);
-    todoContent.value = "";
+    if(todoContent.value===""){
+      alert('输入不能为空！');
+    }
+    else{
+      const todo = {
+        id: tid,
+        content: todoContent.value,
+        completed: false,
+      };
+      emit("add-todo", todo);
+      todoContent.value = "";
+    }
   };
 
   return {
