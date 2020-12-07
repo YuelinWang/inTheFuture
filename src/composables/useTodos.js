@@ -5,7 +5,7 @@ export default function useTodos() {
     // 添加 todo
     const addTodo = (todo) => {
         todos.value.push(todo);
-        window.android.pushNotestodo(todo.completed);
+        window.android.pushNotestodo(todo.title);
     };
 
     // 获取远程 todos
