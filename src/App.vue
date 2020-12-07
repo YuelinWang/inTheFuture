@@ -24,13 +24,12 @@ export default {
     TodoList,
   },
   setup() {
-    const {todos, addTodo,fixed} = useTodos();
+    const {todos, addTodo} = useTodos();
     const {filter, filteredTodos} = useFilteredTodos(todos);
     return {
       todos,
       filter,
       addTodo,
-      fixed,
       filteredTodos,
     };
   },
@@ -47,26 +46,23 @@ export default {
 
 /* 整个页面 */
 main {
-  overflow: hidden;
   width: 100vw;
   min-height: 100vh;
-  /* padding: 10vh 0; */
+  padding: 10vh 0;
   display: grid;
   align-items: start;
   justify-items: center;
+  background: rgb(203, 210, 240);
 }
 
 .container {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  max-width: 400px;
+
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
   border-radius: 24px;
   padding: 48px 28px;
   background-color: rgb(245, 246, 252);
-}
-
-.container::-webkit-scrollbar{
-  display: none;
 }
 
 /* 标题 */

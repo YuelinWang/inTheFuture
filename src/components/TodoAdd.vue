@@ -20,21 +20,16 @@ export default {
 
 // TodoAdd 组件专属 Composable
 function useEmitAddTodo(tid, emit) {
-  const todoContent = ref(""); 
+  const todoContent = ref("");
 
   const emitAddTodo = () => {
-    if(todoContent.value===""){
-      alert('输入不能为空！');
-    }
-    else{
-      const todo = {
-        id: tid,
-        content: todoContent.value,
-        completed: false,
-      };
-      emit("add-todo", todo);
-      todoContent.value = "";
-    }
+    const todo = {
+      id: tid,
+      content: todoContent.value,
+      completed: false,
+    };
+    emit("add-todo", todo);
+    todoContent.value = "";
   };
 
   return {
@@ -64,7 +59,6 @@ function useEmitAddTodo(tid, emit) {
 }
 
 .input-add button {
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -73,20 +67,7 @@ function useEmitAddTodo(tid, emit) {
   color: white;
   position: absolute;
   right: 0px;
-  cursor: pointer;
-  outline: none;
-}
 
-.input-add button:active {
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(#7f95f7,#5941df);
-  border: none;
-  color: white;
-  position: absolute;
-  right: 0px;
   cursor: pointer;
   outline: none;
 }
@@ -99,9 +80,5 @@ function useEmitAddTodo(tid, emit) {
   background-size: 50% 2px, 2px 50%;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.input-add .plus:active{
-
 }
 </style>

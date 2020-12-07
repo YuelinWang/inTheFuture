@@ -32,7 +32,6 @@ export default {
 
 <style>
 .filters {
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
   display: flex;
   margin: 24px 2px;
   color: #c0c2ce;
