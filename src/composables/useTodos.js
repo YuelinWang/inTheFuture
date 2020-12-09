@@ -4,6 +4,7 @@ export default function useTodos() {
     const todos = ref([]);
     // 添加 todo
     const addTodo = (todo) => {
+        todo.id = todos.value.length + 1;
         todos.value.push(todo);
         window.android.pushNotestodo(todo.content);
     };
@@ -32,6 +33,8 @@ export default function useTodos() {
     onMounted(() => {
 
         fetchTodos();
+        // console.log(todos.value.length);
+        // console.log(todos.length);
         //console.log(todos);
     });
 
