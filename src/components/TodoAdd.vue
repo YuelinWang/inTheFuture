@@ -39,8 +39,8 @@ function useEmitAddTodo(tid, emit) {
       };
       // console.log(tid);
     }
-    emit("add-todo", todo);
     todoContent.value = "";
+    emit("add-todo", todo);
   };
 
   return {

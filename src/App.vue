@@ -59,8 +59,6 @@ main {
 .container {
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
-  border-radius: 24px;
   padding: 48px 28px;
   background-color: rgb(245, 246, 252);
 }
