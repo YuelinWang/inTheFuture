@@ -23,6 +23,7 @@ export default {
 
 <style>
 .todo-list {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
   display: grid;
   row-gap: 14px;
 }

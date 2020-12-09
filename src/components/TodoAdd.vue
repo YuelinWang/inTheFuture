@@ -70,6 +70,7 @@ function useEmitAddTodo(tid, emit) {
 }
 
 .input-add button {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -78,7 +79,20 @@ function useEmitAddTodo(tid, emit) {
   color: white;
   position: absolute;
   right: 0px;
+  cursor: pointer;
+  outline: none;
+}
 
+.input-add button:active {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(#7f95f7,#5941df);
+  border: none;
+  color: white;
+  position: absolute;
+  right: 0px;
   cursor: pointer;
   outline: none;
 }

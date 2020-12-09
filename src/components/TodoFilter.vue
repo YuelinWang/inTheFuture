@@ -32,6 +32,7 @@ export default {
 
 <style>
 .filters {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
   display: flex;
   margin: 24px 2px;
   color: #c0c2ce;
@@ -40,7 +41,8 @@ export default {
 }
 
 .filters .filter {
-  margin-right: 14px;
+  text-align: center;
+  flex: 1;
   transition: 0.8s;
 }
 
