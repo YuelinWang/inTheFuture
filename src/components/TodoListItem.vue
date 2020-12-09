@@ -1,10 +1,9 @@
 <template>
   <div class="todo-item" :class="{ done: todoItem.completed }">
     <label>
-      <input
-        type="checkbox"
+      <input type="checkbox"
         :checked="todoItem.completed"
-        @click="$emit('change-state', $event)"
+        @click="emitStatesChange"
       />
       {{ todoItem.content }}
       <span class="check-button"></span>
@@ -13,7 +12,31 @@
 </template>
 
 <script>
-export default { name: "TodoListItem", props: ["todoItem"] };
+// import { ref } from "vue";
+
+export default { 
+  name: "TodoListItem", 
+  props: ["todoItem"],
+  setup(props,context){
+    return useStatesChange(props.todoItem,context.emit);
+  }
+};
+
+function useStatesChange(todoItem,emit){
+  // const statesChange=ref("");
+//$emit('change-state', $event)
+// type="checkbox"
+// :checked="todoItem.completed"
+// @click="$emit('change-state', $event)"
+  const emitStatesChange=()=>{
+    // console.log(todoItem);
+    emit('change-state', event);
+    // emit('change-states', event);
+  }
+  return {
+    emitStatesChange
+  }
+}
 </script>
 
 <style>

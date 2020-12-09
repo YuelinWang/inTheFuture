@@ -4,7 +4,7 @@
       <h1>欢迎使用 Feng 待办事项！</h1>
       <todo-add :tid="todos.length" @add-todo="addTodo" />
       <todo-filter :selected="filter" @change-filter="filter = $event" />
-      <todo-list :todos="filteredTodos" />
+      <todo-list :todos="filteredTodos" @change-states="statesChange"/>
     </div>
   </main>
 </template>
@@ -24,13 +24,14 @@ export default {
     TodoList,
   },
   setup() {
-    const {todos, addTodo} = useTodos();
+    const {todos, addTodo, statesChange} = useTodos();
     const {filter, filteredTodos} = useFilteredTodos(todos);
     return {
       todos,
       filter,
       addTodo,
       filteredTodos,
+      statesChange,
     };
   },
 };

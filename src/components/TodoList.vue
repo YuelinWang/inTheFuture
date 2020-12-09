@@ -3,7 +3,7 @@
     <todo-list-item
       v-for="todo in todos"
       :key="todo.id"
-      @change-state="todo.completed = $event.target.checked"
+      @change-state="todo.completed = $event.target.checked,$emit('change-states', todo)"
       :todo-item="todo"
     ></todo-list-item>
   </div>

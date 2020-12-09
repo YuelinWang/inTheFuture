@@ -1,6 +1,8 @@
 <template>
   <div class="input-add">
-    <input type="text" v-model="todoContent" @keyup.enter="emitAddTodo" />
+    <input type="text" 
+      v-model="todoContent" 
+      @keyup.enter="emitAddTodo" />
     <button @click="emitAddTodo">
       <i class="plus"></i>
     </button>
@@ -32,6 +34,7 @@ function useEmitAddTodo(tid, emit) {
         content: todoContent.value,
         completed: false,
       };
+      console.log(tid);
       emit("add-todo", todo);
       todoContent.value = "";
     }
