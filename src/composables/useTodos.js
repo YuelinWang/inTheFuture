@@ -13,7 +13,7 @@ export default function useTodos() {
             // if (todos.value.length === 0) todo.id = 1;
             // else todo.id = todos.value[todos.value.length - 1].id + 1;
             let id = window.android.nowID();
-            todo.id = id;
+            todo.id = id + 1;
             todos.value.push(todo);
             // console.log(todos.value[todos.value.length - 1].id);
             window.android.pushNotestodo(todo.content);
@@ -35,7 +35,11 @@ export default function useTodos() {
 
         // let alldata = '[{ "id": 1, "userId": 1, "title": "first note", "completed": false }, { "id": 2, "userId": 1, "title": "second note", "completed": false }, { "id": 3, "userId": 1, "title": "3 note", "completed": true }, { "id": 4, "userId": 1, "title": "first note", "completed": false }, { "id": 5, "userId": 1, "title": "second note", "completed": false }, { "id": 6, "userId": 1, "title": "3 note", "completed": true }, { "id": 7, "userId": 1, "title": "7 note", "completed": false }, { "id": 8, "userId": 1, "title": "8note", "completed": false }, { "id": 9, "userId": 1, "title": "9", "completed": true }, { "id": 10, "userId": 1, "title": "10 note", "completed": false }, { "id": 11, "userId": 1, "title": "11", "completed": false }, { "id": 12, "userId": 1, "title": "12", "completed": true }, { "id": 13, "userId": 1, "title": "10 note", "completed": false }, { "id": 14, "userId": 1, "title": "11", "completed": false }, { "id": 15, "userId": 1, "title": "12", "completed": true }, { "id": 16, "userId": 1, "title": "10 note", "completed": false }, { "id": 17, "userId": 1, "title": "11", "completed": false }, { "id": 18, "userId": 1, "title": "18", "completed": true }]';
         // let data = JSON.parse(alldata);
-
+        // todos.value = data.map((todo) => ({
+        //     id: todo.id,
+        //     content: todo.title,
+        //     completed: todo.completed,
+        // }));
         // todos.value === {};
     };
     // const statesChange = (todo) => {
