@@ -23,9 +23,10 @@ export default function useTodos() {
     // const statesChange = (todo) => {
 
     const statesChange = (todo) => {
-        window.android.updateNote(todo);
+        window.android.updateNote(todo.id, todo.completed);
         // console.log(1);
-        // console.log(todo);
+        // console.log(todo.id);
+        // console.log(todo.completed);
     }
 
     onMounted(() => {
