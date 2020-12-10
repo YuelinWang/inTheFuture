@@ -53,6 +53,7 @@ function useStatesChange(todoItem,emit){
   padding: 16px;
   border-radius: 8px;
   color: #626262;
+  word-break: break-all;
 }
 .todo-item .todo-item-body{
   width: 90%;
