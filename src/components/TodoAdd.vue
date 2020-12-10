@@ -31,7 +31,13 @@ function useEmitAddTodo(tid, emit) {
         id: -1
       };
     }
-    else{
+    else if(todoContent.value.split(" ").join("")===""){
+      todo={
+        id: -2
+      };
+      // console.log(-2);
+    }
+    else {
       todo = {
         id: tid,
         content: todoContent.value,

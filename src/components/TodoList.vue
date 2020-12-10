@@ -4,6 +4,7 @@
       v-for="todo in todos"
       :key="todo.id"
       @change-state="todo.completed = $event.target.checked,$emit('change-states', todo)"
+      @del-todo="$emit('del-todos', todo)"
       :todo-item="todo"
     ></todo-list-item>
   </div>

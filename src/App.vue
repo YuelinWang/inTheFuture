@@ -4,7 +4,7 @@
       <h1>未 来</h1>
       <todo-add :tid="todos.length" @add-todo="addTodo" />
       <todo-filter :selected="filter" @change-filter="filter = $event" />
-      <todo-list :todos="filteredTodos" @change-states="statesChange"/>
+      <todo-list :todos="filteredTodos" @change-states="statesChange" @del-todos="delTodo"/>
     </div>
   </main>
 </template>
@@ -24,7 +24,7 @@ export default {
     TodoList,
   },
   setup() {
-    const {todos, addTodo, statesChange} = useTodos();
+    const {todos, addTodo, statesChange, delTodo} = useTodos();
     const {filter, filteredTodos} = useFilteredTodos(todos);
     return {
       todos,
@@ -32,6 +32,7 @@ export default {
       addTodo,
       filteredTodos,
       statesChange,
+      delTodo,
     };
   },
 };
