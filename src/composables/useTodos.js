@@ -5,7 +5,7 @@ export default function useTodos() {
     // 获取远程 todos
     const fetchTodos = async() => {
         let id = window.android.nowID();
-        if (id === 1) {
+        if (id !== 0) {
             let alldata = await window.android.getNotesJson();
             let data = JSON.parse(alldata);
             todos.value = data.map((todo) => ({
