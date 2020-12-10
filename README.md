@@ -8,7 +8,7 @@
 - 前端作者：[霜序廿](https://github.com/YuelinWang)
 - 后端技术栈：java
 - 后端作者：[KJee26](https://github.com/KJee26)
-- UI：AaronyfDesign[https://github.com/AaronyfDesign]
+- UI：[AaronyfDesign](https://github.com/AaronyfDesign)
 
 前端本地启动：
 ```
